@@ -33,6 +33,9 @@ src_dbi(ACDB_v01)
 
 dbListTables(ACDB_v01)
 
+#disconnect----
+dbDisconnect(ACDB_v01)
+
 #sources table----
 dbExecute(ACDB_v01, 
 "CREATE TABLE sources (
@@ -181,7 +184,7 @@ View(dbGetQuery(ACDB_v01,
 #write queries through multiple tables
 #push initial release to github
 
-dbDisconnect(ACDB_v01)
+
 
 #ok let's try updating some of the records here in R----
 #hopefully simple: add 'Avacha Gulf resident killer whales' as 'group above' for Avacha, K20, and K19 acoustic clans in groups table
@@ -209,6 +212,8 @@ dbExecute(ACDB_v01,
           WHERE group_id IN('g36') ;"
 )
 
+View(dbGetQuery(ACDB_v01, 
+                "SELECT * FROM sources ;"))
 
 #technically I want it to check for the next unique id in the group_id sequence and add it automatically if a new group record is added
 #and if a new source is added a new  record should be created in the sources table?
