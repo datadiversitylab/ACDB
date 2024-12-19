@@ -84,6 +84,7 @@ groups <- read.csv("/Users/kiranbasava/DDL/ACDB/oct18_testtables/dec924_groups.c
 #fuck I forgot to reappend the location data
 groupsold <- read.csv("/Users/kiranbasava/DDL/ACDB/oct18_testtables/nov2824_groups.csv", stringsAsFactors = FALSE)
 groups <- merge(groups[c(1:9)], groupsold[c(1,10:13)], by="group_id", all.x=T)
+write.csv(groups, "/Users/kiranbasava/DDL/ACDB/oct18_testtables/dec1324_groups.csv")
 
 dbExecute(ACDB_v01,
 "CREATE TABLE groups (
@@ -116,6 +117,7 @@ dbExecute(ACDB_v01,
 dbWriteTable(ACDB_v01, "groups", groups, overwrite=, append = )
 
 View(dbGetQuery(ACDB_v01, "SELECT * FROM groups ;"))
+View(dbGetQuery(ACDB_v01, "SELECT * FROM species ;"))
 
 
 #behaviors table----
@@ -215,9 +217,45 @@ dbExecute(ACDB_v01,
 View(dbGetQuery(ACDB_v01, 
                 "SELECT * FROM sources ;"))
 
+#and now I need to add Pongo abelii to the species table, which is probably another thing that is done automatically
+dbExecute(ACDB_v01,
+          "INSERT INTO species (species_id, common_name, GBIF, canonicalName, Genus, Family, Ordr, Class, Phylum, IUCN)
+ VALUES ('Pongo_abelii', 'Sumatran orangutans', 5707420, 'Pongo_abelii', 'Pongo', 'Hominidae', 'Primates', 'Mammalia', 'Chordata', 'CR') ;"
+)
+
+#adding three behaviors for Suaq orangs----
+View(dbGetQuery(ACDB_v01, 
+                "SELECT * FROM behaviors ;"))
+
+dbListFields(ACDB_v01, "behaviors")
+
+dbExecute(ACDB_v01, 
+          "INSERT INTO behaviors (behavior_id, [beh.key], behavior, group_id, group_name, behavior_description, behavior_source)
+          VALUES ('b26g36','b26','foraging, Neesia tool use','g36','Suaq Balimbing orangutans','using stick tools to extract seeds from Neesia fruits','vanschaikknott2001'),
+          ('b27g36','b27','architecture, bunk nesting','g36','Suaq Balimbing orangutans','during rain, building a nest above usual resting nest','schupplivanschaik2019'),
+          ('b28g36','b28','foraging, slow loris hunting','g36','Suaq Balimbing orangutans','finding and eating slow lorises hiding in vegetation','schupplivanschaik2019');"
+          )
+          
+View(dbGetQuery(ACDB_v01, 
+                "SELECT * FROM sources ;"))
+
+dbExecute(ACDB_v01, 
+          "INSERT INTO sources (source_id, title, year, authors, doi)
+          VALUES ('vanschaikknott2001','Geographic variation in tool use on Neesia fruits in orangutans',	'2001','Van Schaik, Carel and Knott, Cheryl','10.1002/ajpa.1045'),
+          ('schupplivanschaik2019','Animal cultures how weve only seen the tip of the iceberg','2019','Schuppli, Caroline and Van Schaik, Carel','10.1017/ehs.2019.1');"
+          )
+
 #technically I want it to check for the next unique id in the group_id sequence and add it automatically if a new group record is added
 #and if a new source is added a new  record should be created in the sources table?
 #also latitude and longitude
+
+
+#alphanumeric ids for primary keys----
+paste0("g",seq(1:20))
+paste0("b",seq(1:20))
+
+
+#possibly best to just have a character column with the letter (b or g) and an incrementing column for the number, then composite primary key
 
 
 library(rgbif)
