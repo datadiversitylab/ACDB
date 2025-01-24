@@ -1,0 +1,103 @@
+﻿group_id,group_name,species_id,group_level,group_above,size,size_evidence,size_date,size_source,location_evidence,location_source,lat,long
+700000,Alcatraz Western gulls,Larus_occidentalis,NA,,NA,101 pairs monitored,,,"Alcatraz Island, CA, US",annettpierotti1999,37.827,-122.423
+700001,Amboseli elephant population,Loxodonta_africana,3,,988,,1993,mccomb2000,"Amboseli National Park, Kenya",pardo2024,-2.653,37.261
+700002,Armidale shrike-tits,Falcunculus_frontatus,NA,,NA,,,,"Imbota Nature Reserve, New South Wales",noske2003,-30.573,151.721
+700003,Avacha acoustic clan,Orcinus_orca,2,Avacha Gulf resident killer whales,200,"""Avacha clan, consisting of more than 200 whales in at least 12 pods""",,,"Avacha Gulf, Kamchatka, Sea of Okhotsk",filatova2007,61.434,166.788
+700004,Bossou chimpanzees,Pan_troglodytes_verus,NA,,20,"""Group size at Bossou has been maintained at around 20 throughout the study period of 26 years"" (Sugiyama 2004)",2004,sugiyama2004,"Bossou, Republic of Guinea",ohashimatsuzawa2011,-8.505,7.648
+700005,Bwindi Kyagurilo gorilla group,Gorilla_beringei_beringei,0,,15,ranged from 9 to 21 during study period 1998 to 2011,2005,robbins2016,"Bwindi Impenetrable National Park, Uganda",robbins2016,-1,29.667
+700006,Cananéia Estuary Guiana dolphins,Sotalia_guianensis,NA,,NA,,,,"Cananéia Estuary, Brazil",santos2010,-25.011,-47.93
+700007,Chatham Island population,Fringilla_coelebs,NA,,NA,,,,Chatham Island,baker1987,-43.927,-176.459
+700008,Colony Club site finches,Loxigilla_noctis,NA,,NA,,,,"Colony Club hotel, St. James, Barbados",reader2002,13.194,-59.64
+700009,Colorado elk group,Cervus_canadensis,NA,,NA,,,,"Rock Mountain National Park, Colorado",nelsonreinier2023,39.55,-105.782
+700010,Conneaut Lake swamp sparrows,Melospiza_georgiana,NA,,NA,,,,"Conneaut Lake, Pennsylvania, U.S",nowicki2001,41.603,-80.305
+700011,Convict dialect brown-headed cowbirds,Molothrus_ater,NA,,NA,,,,"Convict Lake, California",ologhlen1995,37.59,-118.858
+700012,Cuvier saddlebacks,Philesturnus_rufusater,NA,,56,"""There were 28 pairs living in the study area when the study began. Of these, 12 individuals were survivors from the original liberation while the other 16 were Cuvier-bred birds . The population increased to 50 pairs in 1971 to 72, dropped to 45 pairs in 1972 to 73 and rose again to 48 pairs in 1973 to 74. The two original colonizers which were still living at that time were at least 7 years old"" (Jenkins 1978)",1974,jenkins1978,Cuvier Island,jenkins1978,-36.435,175.769
+700013,CWOT chimpanzees group 1,Pan_troglodytes,0,,23,,2011,vanleeuwen2012,Chimfunshi Wildlife Orphanage Trust,vanleeuwen2012,-12.364,27.469
+700014,CWOT chimpanzees group 2,Pan_troglodytes,0,,40,,2011,vanleeuwen2012,Chimfunshi Wildlife Orphanage Trust,vanleeuwen2012,-12.364,27.469
+700015,eastern Hudson Bay beluga stock,Delphinapterus_leucas,NA,,3300,2009,,,"eastern Hudson Bay, Canada",colbeck2013,59.51,-80.72
+700016,Ebo forest chimpanzees,Pan_troglodytes_troglodytes,NA,,NA,,,,"Ebo forest, south-western Cameroon",morganabwe2006,4.36,10.23
+700017,Ebro Valley Dupont's Lark,Chersophilus_duponti,NA,,NA,"""In study fragments, we digitally recorded a total of 216 calling individuals and 113 singing individuals from an estimated 450 males...In patches occupied by < 10 males, we recorded a slightly greater proportion of individuals (66–100%) than in larger populations (40–90%)""",,,"Ebro Valley, Spain",laiolo2007,41.849,-1.658
+700018,EE-WW East dialect ravens,Corvus_corax,NA,,46,46 known breeding pairs total in region,,enggist2002,"""south of Bern, Switzerland (46º57'N, 7º30'E)""",enggist2002,46.948,7.447
+700019,En Gedi sunbirds,Cinnyris_osea,NA,Palestine sunbirds,NA,,,,"En Gedi, Dead Sea",yoktan2011,31.451,35.384
+700020,Environmental Learning Center (ELC) black-capped chickadees,Poecile_atricapillus,NA,,NA,,,,"Environmental Learning Center along Cache La Poudre River in Fort Collins, Colorado",baker2000,40.556,-105.02
+700021,False Bay dialect forest weavers,Ploceus_bicolor_stictifrons,NA,,NA,,,,False Bay Park (S 27±580; E 32±210,seibt2002,-27.967,32.35
+700022,Farfan cacique colony,Cacicus_cela_vitellinus,NA,,NA,,,,"Farfan, Panama",trainer1989,8.932,-79.58
+700023,Formosan lesser horseshoe bats populations 1-20,Rhinolophus_monoceros,NA,,NA,,,,Taiwan,chen2009,23.698,120.961
+700024,Fort Collins chickadees,Poecile_atricapillus,NA,,NA,,,,"Fort Collins, CO, US",gammonbaker2004,40.585,-105.084
+700025,George Reserve Indigo buntings,Passerina_cyanea,NA,,130,authors recorded 80-180 males in each area (Payne 1996),,,"E.S. George Reserve, southern Michigan",payne1996,42.458,-84.011
+700026,Grande Terre New Caledonian crows,Corvus_moneduloides,NA,New Caledonian crows,NA,,,,"Grande Terre, New Caledonia",bluff2010,-21.311,165.434
+700027,Gulf of Alaska sperm whales,Physeter_macrocephalus,NA,,NA,,,,Gulf of Alaska,schakner2014,0,-144
+700028,Gulf of Maine humpback whales,Megaptera_novaeangliae,NA,,NA,,,,Gulf of Maine,,43.134,-68.327
+700029,Hainan caves leafnosed bats,Hipposideros_larvatus,NA,,NA,,,,Hainan Island,jiang2010,20.02,110.349
+700030,Hato Masaguaral wrens,Campylorhynchus_nuchalis,NA,,NA,"groups are made of a breeding pair and up to 12 non-breeding alloparents, usually offspring from previous years who have not dispersed. authors recorded calls from 46 breeding males, 22 male helpers, and 14 females from 30 groups (Price 1998)",,,"Hato Masaguaral cattle ranch, 300 km south of Caracas, Venezuela",price1998,10.481,-66.904
+700031,Hluhluwe Park dialect forest weavers,Ploceus_bicolor_stictifrons,NA,,NA,,,,Hluhluwe Imfolozi Game Reserve,seibt2002,-28.062,32.141
+700032,Hluhluwe River dialect forest weavers,Ploceus_bicolor_stictifrons,NA,,NA,,,,"""We recorded this song type at Maphumulo (S 28±070; E 32±060) as well as at Siwasamakhosikazi (S 28±080; E 31±590).""",seibt2002,-28.117,32.1
+700033,Howard dialect caciques,Cacicus_cela_vitellinus,NA,,NA,,,,"Vera Cruz, Panama",trainer1989,8.888,-79.642
+700034,Israeli cypress population,Rattus_rattus,NA,,NA,unclear,,,"Kibbutz Ramot Menashe, Israel",terkel1995,32.598,35.059
+700035,Israeli pine cone population,Rattus_rattus,NA,,NA,unclear,,,"Kibbutz Ramot Menashe, Israel",terkel1995,32.598,35.059
+700036,Istállós-kői-cave foraging tits,Parus_major,NA,,NA,,,,"Istállós-kői-cave, Bükk Mountains, Hungary",estok2010,48.072,20.417
+700037,Jurubeba group,Sapajus libidinosus,NA,,52,,2005,mannu2009,Serra da Capivara National Park,mannu2009,-8.717,-42.602
+700038,K19 acoustic clan,Orcinus_orca,2,Avacha Gulf resident killer whales,NA,,,,"Avacha Gulf, Kamchatka, Sea of Okhotsk",filatova2007,61.434,166.788
+700039,K20 acoustic clan,Orcinus_orca,2,Avacha Gulf resident killer whales,NA,,,,"Avacha Gulf, Kamchatka, Sea of Okhotsk",filatova2007,61.434,166.788
+700040,Karisoke gorilla groups,Gorilla_beringei_beringei,1,,NA,,,,"Karisoke Research Center, Volcanos National Park, Rwanda",robbins2016,-1.833,29.5
+700041,Kasekela chimpanzees,Pan_troglodytes_schweinfurthii,NA,Gombe chimpanzees,55,"""The Kasekela community (n=55 in December 2017) resides in the centre of the Park and has been studied since 1960, with the majority of the individuals well habituated since 1966.""",2017,pascualgarrido2019,"Gombe National Park, Tanzania",pascualgarrido2019,-4.698,29.645
+700042,Lake Merced dialect white-crowned sparrows,Zonotrichia_leucophrys_nuttalli,NA,,NA,,,,"Lake Merced, San Francisco",luther2010,37.721,-122.496
+700043,Lee Martinez Park (LMP) black-capped chickadees,Poecile_atricapillus,NA,,NA,,,,"Lee Martinez Park (LMP) Fort Collins, Colorado",baker2000,40.596,-105.082
+700044,Lee Vining dialect brown-headed cowbirds,Molothrus_ater,NA,,NA,,,,"Lee Vining, eastern Sierra Nevada, California",ologhlen1995,37.958,-119.12
+700045,Lomako bonobos,Pan_paniscus,NA,,20,"""Over the years, the size of the community ranged from 15 to 24 mature individuals, with the number of adult females always exceeding the number of adult males (Hohmann and Fruth 2002)."" (Hohmann & Fruth 2003)",1995,hohmannfruth2003,"Lomako field site, Salonga National Park",hohmannfruth2003,0.85,21.08
+700046,Lomas Barbudal capuchins,Cebus_capucinus,NA,,29,20-37,,,"Lomas de Barbudal Biological Reserve [10° 30 N, 85° 22 W]",panger2002,10.433,-85.4
+700047,Madrid great bustards,Otis_tarda,NA,,NA,,,,Madrid province,palacin2011,40.417,-3.581
+700048,Mare Island New Caledonian crows,Corvus_moneduloides,NA,New Caledonian crows,NA,,,,"Mare, New Caledonia, about 5 km inland from Wabao village",holzhaider2010,-21.599,167.935
+700049,Mediterranean fin whale subpopulation,Balaenoptera_physalus,NA,,NA,,,,northwest Mediterranean basin,castellote2011,43.742,8.206
+700050,Middle group Taï chimpanzees,Pan_troglodytes_verus,NA,Taï chimpanzees,NA,,,,Taï National Park in Côte d'Ivoire,,5.69,-6.939
+700051,Mongolian gerbil Family 1,Meriones_unguiculatus,0,,NA,,,,NA (lab),,NA,NA
+700052,Moreton Bay non-trawler dolphins,Tursiops_aduncus,NA,,NA,trawler dolphin community had larger schools than non-trawlers,,,"eastern Moreton Bay, Queensland, Australia",chilverscorkeron2001,-27.095,152.921
+700053,Moreton Bay trawler dolphins,Tursiops_aduncus,NA,,NA,trawler dolphin community had larger schools than non-trawlers,,,"eastern Moreton Bay, Queensland, Australia",chilverscorkeron2001,-27.095,152.921
+700054,Moukalaba Gentil gorilla group,Gorilla_gorilla_gorilla,0,,21,ranged from 19 to 23 during study period 2007 to 2015,2011,robbins2016,"Moukalaba-Doudou National Park, Gabon",robbins2016,-2.05,10.95
+700055,Mulberry/Lemay (ML) black-capped chickadees,Poecile_atricapillus,NA,,NA,,,,"Mulberry and Lemay Crossing, Fort Collins, Colorado",baker2000,40.581,-105.057
+700056,New Caledonian crows,Corvus_moneduloides,NA,,NA,,,,New Caledonia,,-20.904,165.618
+700057,North group Taï chimpanzees,Pan_troglodytes_verus,NA,Taï chimpanzees,NA,,,,Taï National Park in Côte d'Ivoire,,5.69,-6.939
+700058,North Pacific humpback whale metapopulation,Megaptera_novaeangliae,NA,,NA,,,,North Pacific ocean,darling2019,-8.783,-124.509
+700059,Northeastern North Atlantic fin whale subpopulation,Balaenoptera_physalus,NA,,NA,,,,Alboran basin,castellote2011,36.062,-3.8
+700060,Northern Resident killer whales,Orcinus_orca,3,R-type killer whales,NA,,,,Johnstone Strait,riesch2006,50.462,-126.044
+700061,Northern theme Savannah sparrows,Passerculus_sandwichensis,NA,,NA,,,,"Belgrave, western Ontario",sunghandford2006,43.815,-81.369
+700062,Northern vulture population,Gyps_fulvus,NA,,NA,,,,northern Spain,arrondo2023,40.464,-3.749
+700063,nSMO sabrewings,Pampa_curvipennis,NA,,NA,,,,"El Cielo, Tamaulipas",gonzalez2014,23.276,-99.276
+700064,Oitenta group,Sapajus libidinosus,NA,,12,,2005,mannu2009,Serra da Capivara National Park,mannu2009,-8.717,-42.602
+700065,Okinawa horseshoe bats North colonies,Rhinolophus_pumilus,NA,,NA,,,,Okinawa Island,yoshino2008,26.745,128.237
+700066,Okinawa horseshoe bats South colonies,Rhinolophus_pumilus,NA,,NA,,,,"Motobu peninsula, Okinawa, Japan",yoshino2008,26.658,127.898
+700067,Ooty shortwings,Myiomela_major,NA,,NA,,,,"Ooty sky island, Western Ghat mountains",robin2011,11.41,76.695
+700068,Pacific Coast Feeding Aggregation,Eschrichtius_robustus,NA,eastern gray whale population,NA,,,,Clayoquot Sound,,49.2,-126.1
+700069,Palo Verde capuchins,Cebus_capucinus,NA,,19,about 19 individuals,,,Palo Verde National Park ,panger2002,10.333,-85.333
+700070,Papallacta sparrows,Zonotrichia_capensis,NA,,NA,,,,"Papallacta, Ecuador",moore2005,-0.377,-78.141
+700071,Pennsylvania elk group,Cervus_canadensis,NA,,NA,,,,"Elk County, Pennsylvania",nelsonreinier2023,41.428,-78.566
+700072,Plus-One clan,Physeter_macrocephalus,1,,NA,"""Presumably the numerical sizes of the clans vary accordingly, with the Plus-one clan containing considerably fewer than my rough average of 20000 animals"" (Whitehead 2024)",,whitehead2024,off Galápagos Islands and Ecuador,whitehead2024,-0.902,-85.254
+700073,Presidio dialect white-crowned sparrows,Zonotrichia_leucophrys_nuttalli,NA,,NA,,,,"Presidio, San Francisco",luther2010,37.792,-122.481
+700074,R-type killer whales,Orcinus_orca,4,Orcinus_orca,NA,,,,"Gulf of Alaska, Aleutian Islands, Bering Sea; northern North Pacific",fearnbach2014,54.06,-164.343
+700075,Ramat-Aviv high dialect sunbirds,Nectarinia_osea,NA,,21,"""33% (21 territorial males), singing the high dialect""",,,"Ramat-Aviv neighborhood, Israel",leader2005,32.107,34.796
+700076,Ramat-Aviv low dialect sunbirds,Nectarinia_osea,NA,,37,"""60% of the males (37 territorial males), all singing the low dialect, inhabiting one area""",,,"Ramat-Aviv neighborhood, Israel",leader2005,32.107,34.796
+700077,Regular clan,Physeter_macrocephalus,1,,NA,,,,off Galápagos Islands,whitehead2024,-0.793,-88.68
+700078,Resident Commander Islands beaked whales,Berardius_bairdii,NA,,NA,,,,"southwest coast of Bering Island, Commander Islands, ""about 175 km (109 mi) east of the Kamchatka Peninsula. Geologically they comprise the westernmost part of the Aleutian Islands""",filatova2024,54.781,166.424
+700079,Rodman cacique colony,Cacicus_cela_vitellinus,NA,,NA,,,,"Rodman, Panama",trainer1989,8.947,-79.583
+700080,Rottnest Island Gerygones,Gerygone_fusca,NA,,NA,,,,"Rottnest Island, Indian Ocean",baker2003,-31.997,115.54
+700081,Samburu elephant population,Loxodonta_africana,3,,NA,,,,"Samburu and Buffalo Springs National Reserves, Kenya",pardo2024,0.525,37.591
+700082,San Francisco dialect white-crowned sparrows,Zonotrichia_leucophrys_nuttalli,NA,,NA,,,,"Golden Gate Park, San Francisco",luther2010,37.768,-122.467
+700083,Santa Rosa capuchins,Cebus_capucinus,NA,,18,about 18 individuals,,,"Santa Rosa National Park [10° 45–11° 00N, 85° 30–85° 45]",panger2002,10.884,-85.775
+700084,Santa Rosa spider monkeys,Ateles_geoffroyi,NA,,27,"""The Santa Rosa community consisted of 27–30 individuals"" (Santorelli et al. 2011)",2007,santorelli2011,"Santa Rosa National Park, Area de Conservacion Guanacaste, Costa Rica",santorelli2011,10.839,-85.618
+700085,Shark Bay dolphins,Tursiops_aduncus,NA,,NA,,,,"Eastern Gulf of Shark Bay, Western Australia 113°45′E, 25°48′S",krutzen2005,-25.783,113.299
+700086,South group Taï chimpanzees,Pan_troglodytes_verus,NA,Taï chimpanzees,53,"53 in 1999; severe decline in 2000s due to disease, recovery with immigration from 2010",1999,wittig2017,Taï National Park in Côte d'Ivoire,lunczboesch2014,5.69,-6.939
+700087,Southern Hemisphere Group V,Megaptera_novaeangliae,NA,,NA,,,,"Vava'u island cluster, Hunga, Nua Papu around Tonga",eriksen2005,-18.623,-173.99
+700088,Southern Resident killer whales,Orcinus_orca,3,R-type killer whales,74,"""The SRKW population currently consists of 74 individual whales [14] and is comprised of three largely matrilineal groups, referred to as pods with alphabetic identifications (i.e., J, K and L;)"" (Parsons et al. 2009)",,parsons2009,"Salish Sea ""range along the west coast of North America from southeastern Alaska to California with critical habitat that includes the Salish Sea"" (Giles et al. 2024)",giles2024,48.252,-123.748
+700089,Southern theme Savannah sparrows,Passerculus_sandwichensis,NA,,NA,,,,"London, western Ontario",sunghandford2006,43.01,-81.274
+700090,Southern vulture population,Gyps_fulvus,NA,,NA,,,,southern Spain,arrondo2023,40.464,-3.749
+700091,Stolec (STO) pipistrelle colony,Pipistrellus_pipistrellus,NA,,24,,2007,sztencelbogdanowicz2012,"Stolec, Poland [50°35′22.5″N, 16°53′00.0″E]",sztencelbogdanowicz2012,50.59,16.883
+700092,Suaq Balimbing orangutans,Pongo_abelii,NA,,200,"""In the last 20 years we have identified more than 200 orangutans at Suaq""",,suaq.org/research,"Suaq Balimbing monitoring station, Sumatra, Indonesia",schupplivanschaik2019,3.542,97.464
+700093,T-type killer whales,Orcinus_orca,NA,Orcinus_orca,NA,,,,Salish Sea,,48.33,-123.141
+700094,Tank Farm cacique colony,Cacicus_cela_vitellinus,NA,,NA,,,,"Tank Farm, Panama",trainer1989,8.956,-79.616
+700095,Taunton bowerbirds,Chlamydera_maculata,NA,,NA,,,,"Taunton National Park, Queensland, Australia",madden2004,-23.521,149.219
+700096,TT-QQ West dialect ravens,Corvus_corax,NA,,46,46 known breeding pairs total in region,,enggist2002,"""south of Bern, Switzerland (46º57'N, 7º30'E)""",enggist2002,46.948,7.447
+700097,Tuanan orangutans,Pongo_pygmaeus_wurmbi,NA,,NA,,,,"Stasiun Penelitian Orangutan Tuanan, Central Kalimantan, Indonesia",,-2.051,114.436
+700098,UCSD dark-eyed juncos,Junco_hyemalis,NA,,70,about 70 males in total population,,,University of California San Diego,newman2008,32.88,-117.234
+700099,University of Washington crows,Corvus_brachyrhynchos,NA,,NA,"""(during the course of our research, the crow population in Seattle has remained high [38]; and more recently fluctuated between 93.4 crows per party-hour in 2005 and 80.7 crows per partyhour in 2009)."" (Cornell et al. 2012)",,,"University of Washington, Seattle",cornell2012,47.657,-122.307
+700100,Wollomombi Falls shrike-tits,Falcunculus_frontatus,NA,,NA,,,,"Wollomombi Falls, New South Wales",noske2003,-30.532,152.033
+700101,Wyoming elk group,Cervus_canadensis,NA,,NA,,,,"Yellowstone National Park, Wyoming",nelsonreinier2023,44.598,-110.561

@@ -1,0 +1,58 @@
+﻿species_id,common_name,GBIF,canonicalName,Genus,Family,Ordr,Class,Phylum,primary_social_unit,unit_evidence,unit_source,IUCN
+Berardius_bairdii,Baird's beaked whales,2440388,Berardius bairdii,Berardius,Hyperoodontidae,Cetacea,Mammalia,Chordata,,,,LC
+Campylorhynchus_nuchalis,stripe-backed wren,5231472,Campylorhynchus nuchalis,Campylorhynchus,Troglodytidae,Passeriformes,Aves,Chordata,,,,LC
+Cebus_capucinus,white-faced capuchins,2436637,Cebus capucinus,Cebus,Cebidae,Primates,Mammalia,Chordata,,,,VU
+Cervus_canadensis,North American elk,8600904,Cervus canadensis,Cervus,Cervidae,Artiodactyla,Mammalia,Chordata,,,,LC
+Chersophilus_duponti,Dupont's lark,2490674,Chersophilus duponti,Chersophilus,Alaudidae,Passeriformes,Aves,Chordata,,,,VU
+Corvus_moneduloides,New Caledonian crows,2482475,Corvus moneduloides,Corvus,Corvidae,Passeriformes,Aves,Chordata,family,"""Our findings confirm the preliminary observations of Hunt (2000) and Kenward et al. (2004) suggesting that NC crows live mostly in small family units. We found that these family units were based on long-lasting pair bonds that were maintained year round. Furthermore, juvenile NC crows lived closely with their parents up to the following breeding season, and sometimes longer. However, we found no evidence that juveniles assisted with raising younger siblings."" (Holzhaider et al. 2011)",holzhaider2011,LC
+Fringilla_coelebs,chaffinches,2494422,Fringilla coelebs,Fringilla,Fringillidae,Passeriformes,Aves,Chordata,,,,LC
+Junco_hyemalis,dark-eyed juncos,9362842,Junco hyemalis,Junco,Passerellidae,Passeriformes,Aves,Chordata,,,,LC
+Larus_occidentalis,western gulls,9656686,Larus occidentalis,Larus,Laridae,Charadriiformes,Aves,Chordata,,,,LC
+Loxigilla_noctis,Lesser Antillean Bullfinches,2491059,Loxigilla noctis,Loxigilla,Thraupidae,Passeriformes,Aves,Chordata,,,,LC
+Megaptera_novaeangliae,humpback whales,5220086,Megaptera novaeangliae,Megaptera,Balaenopteridae,Cetacea,Mammalia,Chordata,,,,LC
+Melospiza_georgiana,swamp sparrows,2492235,Melospiza georgiana,Melospiza,Passerellidae,Passeriformes,Aves,Chordata,,,,LC
+Molothrus_ater,brown-headed cowbirds,2484391,Molothrus ater,Molothrus,Icteridae,Passeriformes,Aves,Chordata,,,,LC
+Cinnyris_osea,Palestine sunbird,5230005,Cinnyris osea,Cinnyris,Nectariniidae,Passeriformes,Aves,Chordata,family,monogamous breeding pairs; territorial males (Berger et al. 2014),berger2014,LC
+Orcinus_orca,killer whales,2440483,Orcinus orca,Orcinus,Delphinidae,Cetacea,Mammalia,Chordata,family,The basic unit is the matriline. Both sexes are philopatric (staying with natal group); males briefly disperse to mate with females in other pods in the same clan.,GBIF,DD
+Passerina_cyanea,indigo buntings,2490327,Passerina cyanea,Passerina,Cardinalidae,Passeriformes,Aves,Chordata,,,,LC
+Poecile_atricapillus,black-capped chickadees,2487805,Poecile atricapillus,Poecile,Paridae,Passeriformes,Aves,Chordata,,,,LC
+Rattus_rattus,black rats,2439270,Rattus rattus,Rattus,Muridae,Rodentia,Mammalia,Chordata,,,,LC
+Tursiops_aduncus,Indo-Pacific bottlenose dolphin,2440455,Tursiops aduncus,Tursiops,Delphinidae,Cetacea,Mammalia,Chordata,,"""bottlenose dolphins in Shark Bay live in a fission–fusion society and are not matrilineally organized...The dolphins in Shark Bay are mostly Indo-Pacific bottlenose dolphins (T. aduncus)""",krutzen2005,NT
+Pongo_abelii,Sumatran orangutans,5707420,"
+Pongo abelii",Pongo,Hominidae,Primates,Mammalia,Chordata,individual,"""The high spatial overlap of the individuals in this swamp population of orangutans shows that spatially discrete social units do not exist. However, there is evidence for non-random association among females and between females and males, and hence some form of socially distinct social units...the 'community' can be considered to consist of one or more female clusters and the adult male they all prefer as mate, who has a more limited home range than those of the other males found in the area. However, it is important to point out that this ëcommunityí is not nearly as discrete as that of other fission-fusion primate species, showing neither spatial nor social exclusivity"" (Singleton & van Schaik 2001)",singletonvanschaik2001,CR
+Pongo_pygmaeus_wurmbi,Central Bornean orangutans,5707418,Pongo pygmaeus wurmbii,Pongo,Hominidae,Primates,Mammalia,Chordata,,,,CR
+Physeter_macrocephalus,sperm whales,8123917,Physeter macrocephalus,Physeter,Physeteridae,Cetacea,Mammalia,Chordata,family,"""The foundation of sperm whale society is the matrilineally based social unit of ten or so females and their offspring"" Social units associate primarily with other social units with shared coda repertoires, termed clans (Whitehead 2024)",whitehead2024,VU
+Parus_major,great tits,9705453,Parus major,Parus,Paridae,Passeriformes,Aves,Chordata,,,,LC
+Corvus_brachyrhynchos,American crows,2482507,Corvus brachyrhynchos,Corvus,Corvidae,Passeriformes,Aves,Chordata,,,,LC
+Eschrichtius_robustus,gray whales,2440704,Eschrichtius robustus,Eschrichtius,Eschrichtiidae,Cetacea,Mammalia,Chordata,individual,"""Gray Whales are not known to be social, but they do form loose aggregations on feeding grounds and during migrations. There is no evidence of social bonding other than during copulation and between mother — offspring pairs""",GBIF,LC
+Pan_troglodytes_verus,western chimpanzee,5707422,Pan troglodytes verus,Pan,Hominidae,Primates,Mammalia,Chordata,group,"""multimale - multifemale, fission-fusion communities""",GBIF,CR
+Sotalia_guianensis,Guiana dolphins,2440542,Sotalia guianensis,Sotalia,Delphinidae,Cetacea,Mammalia,Chordata,,,,DD
+Pan_troglodytes_schweinfurthii,eastern chimpanzee,5707421,Pan troglodytes schweinfurthii,Pan,Hominidae,Primates,Mammalia,Chordata,group,"""multimale - multifemale, fission-fusion communities""",GBIF,EN
+Pipistrellus_pipistrellus,common pipistrelle,5218465,Pipistrellus pipistrellus,Pipistrellus,Vespertilionidae,Chiroptera,Mammalia,Chordata,,,,LC
+Ateles_geoffroyi,spider monkeys,2436643,Ateles geoffroyi,Ateles,Atelidae,Primates,Mammalia,Chordata,,,,EN
+Zonotrichia_capensis,Rufous-collared sparrow,5231103,Zonotrichia capensis,Zonotrichia,Passerellidae,Passeriformes,Aves,Chordata,,,,LC
+Pan_troglodytes_troglodytes,"Nigerian-Cameroon chimpanzee, Central chimpanzee",7262069,Pan troglodytes troglodytes,Pan,Hominidae,Primates,Mammalia,Chordata,,,,EN
+Passerculus_sandwichensis,Savannah Sparrow,5231142,Passerculus sandwichensis,Passerculus,Passerellidae,Passeriformes,Aves,Chordata,,,,LC
+Gerygone_fusca,western gerygone,2486563,Gerygone fusca,Gerygone,Acanthizidae,Passeriformes,Aves,Chordata,,,,LC
+Pampa_curvipennis,curve-winged sabrewing,2476121,Pampa curvipennis,Pampa,Trochilidae,Apodiformes,Aves,Chordata,,,,LC
+Myiomela_major,"Nilgiri blue robin, white-bellied shortwing",5788901,Myiomela major,Myiomela,Muscicapidae,Passeriformes,Aves,Chordata,,,,NT
+Meriones_unguiculatus,Mongolian jird,5219721,Meriones unguiculatus,Meriones,Muridae,Rodentia,Mammalia,Chordata,family,live in cooperative social groups made of mating adult pair and extended family members,peterson2023,LC
+Cacicus_cela_vitellinus,yellow-rumped caciques,5229834,Cacicus cela vitellinus,Cacicus,Icteridae,Passeriformes,Aves,Chordata,,,,LC
+Falcunculus_frontatus,crested shrike-tits,2482606,Falcunculus frontatus,Falcunculus,Pachycephalidae,Passeriformes,Aves,Chordata,,,,LC
+Philesturnus_rufusater,North Island Saddleback,4846969,Philesturnus rufusater,Philesturnus,Callaeatidae,Passeriformes,Aves,Chordata,,,,NT
+Chlamydera_maculata,spotted bowerbirds,2494820,Chlamydera maculata,Chlamydera,Ptilonorhynchidae,Passeriformes,Aves,Chordata,,,,LC
+Corvus_corax,common ravens,2482492,Corvus corax,Corvus,Corvidae,Passeriformes,Aves,Chordata,,,,LC
+Balaenoptera_physalus,fin whales,2440718,Balaenoptera physalus,Balaenoptera,Balaenopteridae,Cetacea,Mammalia,Chordata,individual,"""Fin Whales are not gregarious, and the only consistent social bond is the ephemeral mother — offspring pairing that lasts from birth to weaning""",GBIF,EN
+Otis_tarda,great bustard,2474921,Otis tarda,Otis,Otididae,Otidiformes,Aves,Chordata,,,,LC
+Pan_troglodytes,chimpanzee,5219534,Pan troglodytes,Pan,Hominidae,Primates,Mammalia,Chordata,group,"""multimale - multifemale, fission-fusion communities""",GBIF,EN
+Delphinapterus_leucas,beluga,5220003,Delphinapterus leucas,Delphinapterus,Monodontidae,Cetacea,Mammalia,Chordata,,,,LC
+Zonotrichia_leucophrys_nuttalli,white-crowned sparrow,6173256,Zonotrichia leucophrys nuttalli,Zonotrichia,Passerellidae,Passeriformes,Aves,Chordata,,,,LC
+Loxodonta_africana,African savannah elephants,2435350,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,Mammalia,Chordata,family,"""In African savannah elephants (Loxodonta africana), mothers and their dependent offspring form the most fundamental unit of social organization, multiple (usually related) mother–offspring units form a ‘core group’ led by the oldest adult female, multiple (usually related) core groups form a ‘bond group’, and multiple bond groups form a ‘clan’ [35–38]."" (Pardo et al. 2024)",pardo2024,EN
+Rhinolophus_pumilus,Okinawa Horseshoe Bat,5787430,Rhinolophus pumilus,Rhinolophus,Rhinolophidae,Chiroptera,Mammalia,Chordata,,,,NA
+Sapajus_libidinosus,bearded capuchin,7785578,Sapajus libidinosus,Sapajus,Cebidae,Primates,Mammalia,Chordata,,,,NT
+Rhinolophus_monoceros,Formosan lesser horseshoe bat,2432646,Rhinolophus monoceros,Rhinolophus,Rhinolophidae,Chiroptera,Mammalia,Chordata,,,,NA
+Hipposideros_larvatus,intermediate leaf-nosed bat,5218600,Hipposideros larvatus,Hipposideros,Hipposideridae,Chiroptera,Mammalia,Chordata,,,,LC
+Ploceus_bicolor_stictifrons,forest weaver,6089044,Ploceus bicolor stictifrons,Ploceus,Ploceidae,Passeriformes,Aves,Chordata,,,,LC
+Gorilla_beringei_beringei,mountain gorilla,4267319,Gorilla beringei beringei,Gorilla,Hominidae,Primates,Mammalia,Chordata,group,"""Despite large variation in ecological conditions, the basic social structure of gorilla groups is consistent across all localities, with groups composed of an average of ten individuals with at least one adult male (silverback), several adult females and offspring [46,54].""",robbins2016,EN
+Gorilla_gorilla_gorilla,western gorilla,4267318,Gorilla gorilla gorilla,Gorilla,Hominidae,Primates,Mammalia,Chordata,group,"""Despite large variation in ecological conditions, the basic social structure of gorilla groups is consistent across all localities, with groups composed of an average of ten individuals with at least one adult male (silverback), several adult females and offspring [46,54].""",robbins2016,CR
+Gyps_fulvus,Eurasian griffon vulture,2480389,Gyps fulvus,Gyps,Accipitridae,Accipitriformes,Aves,Chordata,,,,LC
