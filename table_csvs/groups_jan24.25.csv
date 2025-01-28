@@ -36,7 +36,7 @@
 700034,Israeli cypress population,Rattus_rattus,NA,,NA,unclear,,,"Kibbutz Ramot Menashe, Israel",terkel1995,32.598,35.059
 700035,Israeli pine cone population,Rattus_rattus,NA,,NA,unclear,,,"Kibbutz Ramot Menashe, Israel",terkel1995,32.598,35.059
 700036,Istállós-kői-cave foraging tits,Parus_major,NA,,NA,,,,"Istállós-kői-cave, Bükk Mountains, Hungary",estok2010,48.072,20.417
-700037,Jurubeba group,Sapajus libidinosus,NA,,52,,2005,mannu2009,Serra da Capivara National Park,mannu2009,-8.717,-42.602
+700037,Jurubeba group,Sapajus_libidinosus,NA,,52,,2005,mannu2009,Serra da Capivara National Park,mannu2009,-8.717,-42.602
 700038,K19 acoustic clan,Orcinus_orca,2,Avacha Gulf resident killer whales,NA,,,,"Avacha Gulf, Kamchatka, Sea of Okhotsk",filatova2007,61.434,166.788
 700039,K20 acoustic clan,Orcinus_orca,2,Avacha Gulf resident killer whales,NA,,,,"Avacha Gulf, Kamchatka, Sea of Okhotsk",filatova2007,61.434,166.788
 700040,Karisoke gorilla groups,Gorilla_beringei_beringei,1,,NA,,,,"Karisoke Research Center, Volcanos National Park, Rwanda",robbins2016,-1.833,29.5
@@ -63,7 +63,7 @@
 700061,Northern theme Savannah sparrows,Passerculus_sandwichensis,NA,,NA,,,,"Belgrave, western Ontario",sunghandford2006,43.815,-81.369
 700062,Northern vulture population,Gyps_fulvus,NA,,NA,,,,northern Spain,arrondo2023,40.464,-3.749
 700063,nSMO sabrewings,Pampa_curvipennis,NA,,NA,,,,"El Cielo, Tamaulipas",gonzalez2014,23.276,-99.276
-700064,Oitenta group,Sapajus libidinosus,NA,,12,,2005,mannu2009,Serra da Capivara National Park,mannu2009,-8.717,-42.602
+700064,Oitenta group,Sapajus_libidinosus,NA,,12,,2005,mannu2009,Serra da Capivara National Park,mannu2009,-8.717,-42.602
 700065,Okinawa horseshoe bats North colonies,Rhinolophus_pumilus,NA,,NA,,,,Okinawa Island,yoshino2008,26.745,128.237
 700066,Okinawa horseshoe bats South colonies,Rhinolophus_pumilus,NA,,NA,,,,"Motobu peninsula, Okinawa, Japan",yoshino2008,26.658,127.898
 700067,Ooty shortwings,Myiomela_major,NA,,NA,,,,"Ooty sky island, Western Ghat mountains",robin2011,11.41,76.695
@@ -74,8 +74,8 @@
 700072,Plus-One clan,Physeter_macrocephalus,1,,NA,"""Presumably the numerical sizes of the clans vary accordingly, with the Plus-one clan containing considerably fewer than my rough average of 20000 animals"" (Whitehead 2024)",,whitehead2024,off Galápagos Islands and Ecuador,whitehead2024,-0.902,-85.254
 700073,Presidio dialect white-crowned sparrows,Zonotrichia_leucophrys_nuttalli,NA,,NA,,,,"Presidio, San Francisco",luther2010,37.792,-122.481
 700074,R-type killer whales,Orcinus_orca,4,Orcinus_orca,NA,,,,"Gulf of Alaska, Aleutian Islands, Bering Sea; northern North Pacific",fearnbach2014,54.06,-164.343
-700075,Ramat-Aviv high dialect sunbirds,Nectarinia_osea,NA,,21,"""33% (21 territorial males), singing the high dialect""",,,"Ramat-Aviv neighborhood, Israel",leader2005,32.107,34.796
-700076,Ramat-Aviv low dialect sunbirds,Nectarinia_osea,NA,,37,"""60% of the males (37 territorial males), all singing the low dialect, inhabiting one area""",,,"Ramat-Aviv neighborhood, Israel",leader2005,32.107,34.796
+700075,Ramat-Aviv high dialect sunbirds,Cinnyris_osea,NA,,21,"""33% (21 territorial males), singing the high dialect""",,,"Ramat-Aviv neighborhood, Israel",leader2005,32.107,34.796
+700076,Ramat-Aviv low dialect sunbirds,Cinnyris_osea,NA,,37,"""60% of the males (37 territorial males), all singing the low dialect, inhabiting one area""",,,"Ramat-Aviv neighborhood, Israel",leader2005,32.107,34.796
 700077,Regular clan,Physeter_macrocephalus,1,,NA,,,,off Galápagos Islands,whitehead2024,-0.793,-88.68
 700078,Resident Commander Islands beaked whales,Berardius_bairdii,NA,,NA,,,,"southwest coast of Bering Island, Commander Islands, ""about 175 km (109 mi) east of the Kamchatka Peninsula. Geologically they comprise the westernmost part of the Aleutian Islands""",filatova2024,54.781,166.424
 700079,Rodman cacique colony,Cacicus_cela_vitellinus,NA,,NA,,,,"Rodman, Panama",trainer1989,8.947,-79.583

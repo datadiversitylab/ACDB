@@ -12,7 +12,7 @@ Loxigilla_noctis,Lesser Antillean Bullfinches,2491059,Loxigilla noctis,Loxigilla
 Megaptera_novaeangliae,humpback whales,5220086,Megaptera novaeangliae,Megaptera,Balaenopteridae,Cetacea,Mammalia,Chordata,,,,LC
 Melospiza_georgiana,swamp sparrows,2492235,Melospiza georgiana,Melospiza,Passerellidae,Passeriformes,Aves,Chordata,,,,LC
 Molothrus_ater,brown-headed cowbirds,2484391,Molothrus ater,Molothrus,Icteridae,Passeriformes,Aves,Chordata,,,,LC
-Cinnyris_osea,Palestine sunbird,5230005,Cinnyris osea,Cinnyris,Nectariniidae,Passeriformes,Aves,Chordata,family,monogamous breeding pairs; territorial males (Berger et al. 2014),berger2014,LC
+Cinnyris_osea,Palestine sunbird,7340679,Cinnyris osea,Cinnyris,Nectariniidae,Passeriformes,Aves,Chordata,family,monogamous breeding pairs; territorial males (Berger et al. 2014),berger2014,LC
 Orcinus_orca,killer whales,2440483,Orcinus orca,Orcinus,Delphinidae,Cetacea,Mammalia,Chordata,family,The basic unit is the matriline. Both sexes are philopatric (staying with natal group); males briefly disperse to mate with females in other pods in the same clan.,GBIF,DD
 Passerina_cyanea,indigo buntings,2490327,Passerina cyanea,Passerina,Cardinalidae,Passeriformes,Aves,Chordata,,,,LC
 Poecile_atricapillus,black-capped chickadees,2487805,Poecile atricapillus,Poecile,Paridae,Passeriformes,Aves,Chordata,,,,LC
@@ -56,3 +56,4 @@ Ploceus_bicolor_stictifrons,forest weaver,6089044,Ploceus bicolor stictifrons,Pl
 Gorilla_beringei_beringei,mountain gorilla,4267319,Gorilla beringei beringei,Gorilla,Hominidae,Primates,Mammalia,Chordata,group,"""Despite large variation in ecological conditions, the basic social structure of gorilla groups is consistent across all localities, with groups composed of an average of ten individuals with at least one adult male (silverback), several adult females and offspring [46,54].""",robbins2016,EN
 Gorilla_gorilla_gorilla,western gorilla,4267318,Gorilla gorilla gorilla,Gorilla,Hominidae,Primates,Mammalia,Chordata,group,"""Despite large variation in ecological conditions, the basic social structure of gorilla groups is consistent across all localities, with groups composed of an average of ten individuals with at least one adult male (silverback), several adult females and offspring [46,54].""",robbins2016,CR
 Gyps_fulvus,Eurasian griffon vulture,2480389,Gyps fulvus,Gyps,Accipitridae,Accipitriformes,Aves,Chordata,,,,LC
+Pan_paniscus,bonobos,5219533,Pan paniscus,Pan,Hominidae,Primates,Mammalia,Chordata,group,"""multimale - multifemale, fission-fusion communities"" (coded as individual in original Prox & Farine paper, have decided group is a better fit here)",GBIF,EN
