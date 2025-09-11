@@ -4,7 +4,7 @@ library(dplyr)
 library(readr)
 
 #open database connection----
-ACDB_dev <- dbConnect(RSQLite::SQLite(), "/Users/kiranbasava/DDL/ACDB/dev_Kiran/ACDB_dev.sql")
+ACDB_dev <- dbConnect(RSQLite::SQLite(), "/Users/kiranbasava/DDL/ACDB_git/db/ACDB_dev.sql")
 
 dbListTables(ACDB_dev)
 
@@ -152,6 +152,24 @@ dbExecute(ACDB_dev,
 dbWriteTable(ACDB_dev, "behaviors", behaviors, append = TRUE)
 View(dbGetQuery(ACDB_dev, "SELECT * FROM behaviors ;"))
 dbGetQuery(ACDB_dev, "PRAGMA table_info([behaviors]);")  #make sure species_id is primary key
+
+#write to csvs----
+library(readr)
+
+behaviors <- as.data.frame(dbGetQuery(ACDB_dev, "SELECT * FROM behaviors ;"))
+write_excel_csv(behaviors, "/Users/kiranbasava/DDL/ACDB_git/db/behaviors.csv")
+
+sources <- as.data.frame(dbGetQuery(ACDB_dev, "SELECT * FROM sources ;"))
+write_excel_csv(sources, "/Users/kiranbasava/DDL/ACDB_git/db/table_csvs/sources.csv")
+
+species <- as.data.frame(dbGetQuery(ACDB_dev, "SELECT * FROM species ;"))
+write_excel_csv(species, "/Users/kiranbasava/DDL/ACDB_git/db/table_csvs/species.csv")
+
+groups <- as.data.frame(dbGetQuery(ACDB_dev, "SELECT * FROM groups ;"))
+write_excel_csv(groups, "/Users/kiranbasava/DDL/ACDB_git/db/groups.csv")
+
+
+
 
 #disconnect----
 dbDisconnect(ACDB_dev)
