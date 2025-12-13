@@ -123,3 +123,7 @@
 700121,"Tursiops_truncatus","Biloxi Marsh dolphins",NA,NA,NA,NA,NA,NA,"Biloxi Marsh, Louisiana, US","samuelson2020",29.950654778333927,-89.52986779205462
 700122,"Tursiops_truncatus","Galveston Ship Channel dolphins",NA,NA,NA,NA,NA,NA,"Galveston Ship Channel, Galveston Bay Estuary, Gulf of Mexico ","piwetz2019",29,-94
 700123,"Cebus_imitator","Jicarón white-faced capuchins","0",NA,NA,NA,NA,NA,"Jicarón island, Coiba National Park, Panama","goldsborough2025",7.273314058219894,-81.80819563688333
+700124,"Balaenoptera_musculus","Northeast Pacific blue whales",NA,NA,NA,NA,NA,NA,"west coast of North and Central America","mcdonald2023",37.66072315075687,-123.45944373766638
+700125,"Balaenoptera_edeni","Gulf of Thailand Bryde’s whales",NA,NA,NA,NA,NA,NA,"upper Gulf of Thailand","iwata2017",11.54809748285002,100.92175964971015
+700126,"Megaptera_novaeangliae","Western Antarctic Peninsula humpback whales",NA,NA,"12000","""The WAP population has doubled from ~6000 to ~12 000 individuals between 2006 and 2020 (Félix et al. 2021)"" (Allen et al. 2024)","2020","allen2024","Palmer US Antarctic Research Station, Western Antarctic Peninsula","allen2024",-64.77423,-64.052718
+700127,"Megaptera_novaeangliae","Northeastern Vancouver Island humpback whales",NA,NA,NA,NA,NA,NA,"Northeastern Vancouver Island (NEVI), Canada","mcmillan2018",50.6334897884399,-126.76658087214706
