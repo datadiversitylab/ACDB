@@ -1,6 +1,7 @@
 # Animal Culture Database (ACDB)
 
 The **Animal Culture Database (ACDB)** is a comparative database of cultural behaviors across nonhuman animal species. It synthesizes current literature on intra-species behavioral variation in contexts such as communication, foraging, and migration into a relational database accessible through an open-access Shiny app.
+ 
 
 
 ## Overview
