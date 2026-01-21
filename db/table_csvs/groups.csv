@@ -127,3 +127,7 @@
 700125,"Balaenoptera_edeni","Gulf of Thailand Bryde’s whales",NA,NA,NA,NA,NA,NA,"upper Gulf of Thailand","iwata2017",11.54809748285002,100.92175964971015
 700126,"Megaptera_novaeangliae","Western Antarctic Peninsula humpback whales",NA,NA,"12000","""The WAP population has doubled from ~6000 to ~12 000 individuals between 2006 and 2020 (Félix et al. 2021)"" (Allen et al. 2024)","2020","allen2024","Palmer US Antarctic Research Station, Western Antarctic Peninsula","allen2024",-64.77423,-64.052718
 700127,"Megaptera_novaeangliae","Northeastern Vancouver Island humpback whales",NA,NA,NA,NA,NA,NA,"Northeastern Vancouver Island (NEVI), Canada","mcmillan2018",50.6334897884399,-126.76658087214706
+700128,"Megaptera_novaeangliae","Arabian Sea humpback whales","0",NA,"82-100","""The effective population size estimate for the ASHW obtained in this study suggests a population size of around 100 animals, which is in agreement with the census estimate of 82 individuals obtained for the area off Oman using mark-recapture data"" (Pomilla et al. 2014)","2008","pomilla2014","mark-recapture data indicates ""likely year-round residence off the coast of Oman"" (Pomilla et al. 2014)","pomilla2014",19.81845,58.235603
+700129,"Megaptera_novaeangliae","Brazilian humpback whales","0",NA,NA,NA,NA,NA,"Abrolhos Bank, Bahia, Brazil
+","goncalves2023",-17.962944,-38.703417
+700130,"Megaptera_novaeangliae","Kitimat Fjord System humpback whales",NA,NA,NA,NA,NA,NA,"Kitimat Fjord System, British Columbia, Canada","wray2021",53.332622,-129.20529
