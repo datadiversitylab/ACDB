@@ -49,7 +49,7 @@ You can access the ACDB Shiny app [here]([#](https://viz.datascience.arizona.edu
 ## Planned updates and expansions
 
 As well as continuing to integrate data from the current literature, the following variables are planned to be added:
-- behavior table: observation time, transmission biases, gendered transmission
+- behavior table: observation time, sex-biased transmission
 - species table: dispersal/migration
 
 ## Contribution guidelines
