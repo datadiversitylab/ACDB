@@ -46,9 +46,15 @@ You can access the ACDB Shiny app [here]([#](https://viz.datascience.arizona.edu
 - `README.md`: This file.
 - `LICENSE`: License information.
 
+## Planned updates and expansions
+
+As well as continuing to integrate data from the current literature, the following variables are planned to be added:
+- behavior table: observation time, transmission biases, gendered transmission
+- species table: dispersal/migration
+
 ## Contribution guidelines
 
-We welcome contributions from researchers to expand and update the database. Please see the [Contribution Guidelines](#) for instructions on how to submit your data.
+We welcome contributions from researchers to expand and update the database. We are working on developing a standardized pipeline for users to submit their own data. For now, please contact kcb7@arizona.edu if you have data you wish to submit. 
 
 ## License
 
