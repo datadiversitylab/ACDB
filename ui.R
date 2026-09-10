@@ -22,22 +22,29 @@ ui <-
       style = "font-size: 24px; font-weight: bold; padding: 0 20px;",
       "The Animal Culture Database"
     ),    
-    header = tags$style(
-      HTML("
-      .navbar-nav {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-      }
-      .navbar-nav > li > a {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 15px 20px;
-      }
-      .navbar { position: sticky; top: 0; z-index: 1020; }
-    ")
-    ),
-    
+    header = tagList(
+  tags$style(
+    HTML("
+    .navbar-nav {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar-nav > li > a {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 15px 20px;
+    }
+    .navbar { position: sticky; top: 0; z-index: 1020; }
+  ")
+  ),
+  tags$script(defer = NA,
+    src = "https://umami.datadiversitylab.synology.me/script.js",
+    `data-website-id` = "543cffef-a100-47af-9dd9-2cf39517077b",
+    `data-domains` = "datadiversitylab.github.io",
+    `data-tag` = "acdb"
+  )
+),
     # Landing page
     tabPanel(
       tags$div(icon("home"), "Home"),
