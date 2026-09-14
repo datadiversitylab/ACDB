@@ -16,16 +16,7 @@ The **ACDB** aims to:
 
 - **Interactive map**: Visualize the geographic distribution of recorded populations with cultural behaviors.
 - **Search and filter**: Search and filter data by species, behavior types, transmission modes, and other variables.
-- **Data access**: Download current data tables for further analysis.
-- **Data contribution**: Submit new data through a standardized form and guidelines.
 
-
-## Usage
-
-1. **Explore the map**: Navigate the interactive world map to view recorded populations and their cultural behaviors.
-2. **Search and filter**: Use the search functionality to find specific species or behaviors of interest.
-3. **Download data**: Access the "Download Data" section to download data tables in CSV format.
-4. **Contribute data**: Follow the guidelines in the "Contribute" section to submit new data for inclusion in the database.
 
 
 ## Getting Started
@@ -44,9 +35,8 @@ You can access the ACDB Shiny app [here](https://viz.datascience.arizona.edu/ACD
 
 ## Planned updates and expansions
 
-As well as continuing to integrate data from the current literature, the following variables are planned to be added:
-- behavior table: observation time, sex-biased transmission
-- species table: dispersal/migration
+We are continuing to integrate data and plan to cover the majority of existing animal behavior literature for version 2.0, as well as developing a pipeline for external data contributions and updates. A description of each table with variable definitions, as well as planned changes, can be viewed in the ACDB_codebook_2026 file. 
+
 
 ## Contribution guidelines
 
