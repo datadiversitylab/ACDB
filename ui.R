@@ -65,14 +65,14 @@ ui <-
               "Exploring the World’s Diversity of Nonhuman Animal Traditions"
             ),
             #br(),
-            tags$div(
-              style = "text-align: center; margin-top: 30px;",
-              tags$img(
-                src = "globe_animals.png", 
-                style = "max-width: 40%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px;"
-              )
-            ),
-            br(),
+            # tags$div(
+            #   style = "text-align: center; margin-top: 30px;",
+            #   tags$img(
+            #     src = "globe_animals.png", 
+            #     style = "max-width: 40%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px;"
+            #   )
+            # ),
+            # br(),
             
             # Introduction text
             tags$p(
