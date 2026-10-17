@@ -54,7 +54,7 @@ server <- function(input, output, session) {
   # Render leaflet map
   output$population_map <- renderLeaflet({
     leaflet(data = groups_with_details) %>%
-      addProviderTiles(providers$CartoDB.Positron) %>%  # Light-themed tiles
+      addProviderTiles(providers$OpenStreetMap.Mapnik) %>%  # Light-themed tiles
       addCircleMarkers(
         lng = ~long, lat = ~lat,
         radius = 6,  # Marker size
