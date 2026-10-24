@@ -1,6 +1,11 @@
 name: release
 
-# Versioning rule
+# Two ways in.
+#   Actions tab, Run workflow, pick patch, minor, or major. It bumps VERSION,
+#   commits, tags, and publishes a data bundle. Nothing to do locally.
+#   Or push a tag yourself, v1.0.0, and it publishes that.
+#
+# Versioning rule (from the data paper)
 #   major  100 or more new populations
 #   minor  1 to 99 new populations
 #   patch  changes to existing content (missing paper, taxonomy, locations)
@@ -20,7 +25,12 @@ permissions:
   contents: write
 
 jobs:
+  # Nothing is published unless the database passes the checks
+  check:
+    uses: ./.github/workflows/check-db.yml
+
   release:
+    needs: check
     runs-on: ubuntu-latest
 
     steps:
