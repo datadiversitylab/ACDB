@@ -326,3 +326,13 @@ table.dataTable.no-footer { border-bottom: none; }
 .acdb-about .txt { margin: 0 0 6px; font-size: 14.5px; line-height: 1.6; color: var(--text); }
 .acdb-about .credit { font-size: 12px; color: var(--muted); }
 .acdb-about .credit a { color: var(--teal); }
+
+/* Inside another website (?embed=1). The host page already has the title and the footer */
+.acdb-embed .navbar-brand { font-size: 0; padding: 0; margin-right: 8px; }
+.acdb-embed .navbar-brand img { display: none; }
+.acdb-embed .navbar-brand .acdb-ver { margin-left: 0; font-size: 12px; }
+.acdb-embed .acdb-hero { padding: 28px 20px 26px; }
+.acdb-embed .acdb-hero h1, .acdb-embed .acdb-pills { display: none; }
+.acdb-embed .acdb-lead { margin-bottom: 16px; font-size: 16px; }
+.acdb-embed .acdb-foot { display: none; }
+.acdb-embed .acdb-section { margin-top: 24px; }

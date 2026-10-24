@@ -388,6 +388,7 @@ server <- function(input, output, session) {
     filename = function() paste0("ACDB_populations_", Sys.Date(), ".csv"),
     content = function(file) {
       d <- pop_data()
+      track("csv_download", rows = nrow(d))
       out <- data.frame(
         group = d$group_name, species = d$canonicalName, common_name = d$common_name, class = d$Class,
         order = d$Ordr, family = d$Family, domains = d$domains, behaviors = d$behavior_count,
@@ -579,6 +580,9 @@ server <- function(input, output, session) {
     bars(setNames(counts, cap(names(counts))), acdb_palette[slot(match(names(counts), domain_levels))])
   }
   
+  # Tell the page around the app (see www/embed.js) what people do, so that the host site can count it
+  track <- function(name, ...) session$sendCustomMessage("acdb_track", list(name = name, data = list(...)))
+  
   # Species window, opened from the map, the gallery, the table, the tree, and the cards
   modal_species <- reactiveVal(NULL)
   
@@ -589,6 +593,7 @@ server <- function(input, output, session) {
     info <- sp_info[sp_info$species_id == sid, ]
     doms <- split_domains(info$domains)
     modal_species(sid)
+    track("species_open", species = sid)
     
     # Populations and their behaviors
     behaviors_ui <- lapply(seq_len(nrow(pk$gr)), function(i) {
@@ -671,7 +676,7 @@ server <- function(input, output, session) {
         actionButton("modal_pdf", "Download card (PDF)", icon = icon("download"), class = "btn-primary"),
         tags$button(
           type = "button", class = "btn btn-default",
-          onclick = sprintf("var u = location.origin + location.pathname + '?species=%s'; var b = this; navigator.clipboard.writeText(u).then(function() { b.textContent = 'Link copied'; });", sid),
+          onclick = sprintf("acdbCopyLink('%s', this);", sid),
           icon("link"), " Copy link"
         ),
         modalButton("Close")
@@ -848,6 +853,7 @@ server <- function(input, output, session) {
   
   print_card <- function(sid) {
     sp <- species_table[species_table$species_id == sid, ][1, ]
+    track("card_download", species = sid)
     session$sendCustomMessage("acdb_print", list(
       title = paste("ACDB card", sp$canonicalName),
       file = paste0("ACDB_card_", gsub("[^A-Za-z0-9]+", "_", sp$canonicalName), ".pdf"),

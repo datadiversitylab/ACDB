@@ -38,6 +38,7 @@ ui <-
       tags$script(src = asset("photos.js"), defer = NA),
       tags$script(src = asset("tree.js"), defer = NA),
       tags$script(src = asset("print.js"), defer = NA),
+      tags$script(src = asset("embed.js"), defer = NA),
       tags$script(defer = NA,
         src = "https://umami.datadiversitylab.synology.me/script.js",
         `data-website-id` = "543cffef-a100-47af-9dd9-2cf39517077b",
