@@ -1,0 +1,125 @@
+name: release
+
+# Versioning rule
+#   major  100 or more new populations
+#   minor  1 to 99 new populations
+#   patch  changes to existing content (missing paper, taxonomy, locations)
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Which part of the version to raise
+        type: choice
+        options: [patch, minor, major]
+        default: patch
+        required: true
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Compare the populations with the last release, so the notes can say
+      # how many are new and the run can warn if the bump looks wrong
+      - name: Count new populations
+        id: count
+        run: |
+          sqlite3 db/ACDB_dev.sql "select group_id from groups" | sort > now.txt
+          prev=$(git tag --sort=-v:refname | grep -v "^${GITHUB_REF_NAME}$" | head -n 1 || true)
+          if [ -n "$prev" ]; then
+            git show "$prev:db/ACDB_dev.sql" > prev.sql
+            sqlite3 prev.sql "select group_id from groups" | sort > prev.txt
+            added=$(comm -13 prev.txt now.txt | wc -l | tr -d ' ')
+          else
+            added=$(wc -l < now.txt | tr -d ' ')
+          fi
+          echo "added=$added" >> "$GITHUB_OUTPUT"
+          echo "since=${prev:-the start}" >> "$GITHUB_OUTPUT"
+
+          if [ "$added" -ge 100 ]; then expected=major
+          elif [ "$added" -ge 1 ]; then expected=minor
+          else expected=patch; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.bump }}" != "$expected" ]; then
+            echo "::warning::$added new populations since ${prev:-the start} point to a $expected release, not ${{ inputs.bump }}"
+          fi
+
+      - name: Bump the version and tag it
+        id: bump
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          current=$(tr -d '[:space:]' < VERSION)
+          IFS=. read -r major minor patch <<< "$current"
+          case "${{ inputs.bump }}" in
+            major) major=$((major + 1)); minor=0; patch=0 ;;
+            minor) minor=$((minor + 1)); patch=0 ;;
+            patch) patch=$((patch + 1)) ;;
+          esac
+          next="$major.$minor.$patch"
+          echo "$next" > VERSION
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add VERSION
+          git commit -m "Release $next"
+          git tag "v$next"
+          # A push made with GITHUB_TOKEN does not start another workflow run,
+          # so this cannot loop back into itself
+          git push origin "HEAD:${{ github.ref_name }}" "v$next"
+
+          echo "version=$next" >> "$GITHUB_OUTPUT"
+          echo "Released $next" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Settle on the version
+        id: v
+        run: |
+          if [ -n "${{ steps.bump.outputs.version }}" ]; then
+            echo "version=${{ steps.bump.outputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build the data bundle
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          mkdir -p release "ACDB-$VERSION"
+          cp db/ACDB_dev.sql "ACDB-$VERSION/ACDB.sqlite"
+          cp -r db/table_csvs "ACDB-$VERSION/table_csvs"
+          cp ACDB_codebook_2026.pdf "ACDB-$VERSION/"
+          echo "$VERSION" > "ACDB-$VERSION/VERSION"
+          zip -rq "release/ACDB-$VERSION.zip" "ACDB-$VERSION"
+
+          q() { sqlite3 db/ACDB_dev.sql "select count(*) from $1"; }
+          {
+            echo "**$(q groups) populations** across $(q species) species, with $(q behaviors) behaviors from $(q sources) sources."
+            echo
+            echo "New populations since ${{ steps.count.outputs.since }}: ${{ steps.count.outputs.added }}."
+            echo
+            echo "The zip has the SQLite database, one CSV per table, and the codebook."
+            echo
+            echo "Cite the data paper: https://www.nature.com/articles/s41597-025-05315-y"
+          } > notes.md
+
+      - name: Check the bundle landed
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          ls -lh release/
+          test -f "release/ACDB-$VERSION.zip"
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.v.outputs.version }}
+          name: ACDB ${{ steps.v.outputs.version }}
+          files: release/*
+          body_path: notes.md
+          generate_release_notes: true
