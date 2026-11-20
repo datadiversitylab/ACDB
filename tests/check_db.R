@@ -1,9 +1,9 @@
 ###################
 # check_db.R
 #
-# Checks that the database and the files around it meet what the app expects.
+# Checks that the database and the files around it meet what the website expects.
 # Run it from the project folder: Rscript tests/check_db.R
-# Errors would break or mislead the app, and they fail the run.
+# Errors would break or mislead the website, and they fail the run.
 # Warnings are worth a look, and they do not fail the run.
 ###################
 
@@ -19,7 +19,7 @@ blank <- function(x) is.na(x) | trimws(as.character(x)) == ""
 show <- function(x, n = 8) paste0(paste(head(x, n), collapse = ", "), if (length(x) > n) paste0(" and ", length(x) - n, " more") else "")
 plural <- function(n, one, many = paste0(one, "s")) paste(n, if (n == 1) one else many)
 
-# What the app reads
+# What the website reads
 required <- list(
   species = c("species_id", "common_name", "GBIF", "canonicalName", "Genus", "Family", "Ordr", "Class", "Phylum",
               "primary_social_unit", "unit_evidence", "unit_source", "IUCN"),
@@ -34,9 +34,15 @@ required <- list(
 known_classes <- c("Aves", "Mammalia", "Insecta")
 known_iucn <- c("LC", "NT", "VU", "EN", "CR", "DD", "EW", "EX")
 known_transmission <- c("yes", "no", "inferred yes", "inferred no", "maybe", "possible", "maybe/not clear", "unclear", "suspected unknown")
-known_domains <- c("antipredation", "architecture", "foraging", "mating", "migration", "other", "play", "social", "vocal communication")
+known_domains <- c("antipredation", "architecture", "communication", "foraging", "mating", "migration", "other", "play", "social")
 placeholders <- c("", "not searched", "suspected unknown", "not applicable")
 asset_files <- c("acdb.css", "card.css", "photos.js", "tree.js", "print.js", "DDLLogo_white.png", "DDLLogo_white_small.png")
+site_files <- c("site/build_site.R", "site/site.js", "site/static.css",
+                "site/vendor/bootstrap/bootstrap-cosmo.min.css", "site/vendor/bootstrap/bootstrap.bundle.min.js",
+                "site/vendor/jquery/jquery.min.js", "site/vendor/datatables/jquery.dataTables.min.js",
+                "site/vendor/datatables/dataTables.bootstrap5.min.js", "site/vendor/datatables/dataTables.bootstrap5.min.css",
+                "site/vendor/leaflet/leaflet.js", "site/vendor/leaflet/leaflet.css", "site/vendor/markercluster/leaflet.markercluster.js",
+                "site/vendor/fontawesome/css/all.min.css")
 
 finish <- function() {
   cat("\n")
@@ -63,21 +69,19 @@ if (!file.exists("VERSION")) {
   fail("VERSION must look like 1.2.3.")
 }
 
-for (f in asset_files) if (!file.exists(file.path("www", f))) fail("www/", f, " is missing, and the app loads it.")
+for (f in asset_files) if (!file.exists(file.path("www", f))) fail("www/", f, " is missing, and the website loads it.")
+for (f in site_files) if (!file.exists(f)) fail(f, " is missing, and the website needs it.")
 
-# The app files must be valid R
-for (f in c("ui.R", "server.R", "app.R")) {
-  if (!file.exists(f)) {
-    fail(f, " is missing.")
-  } else {
-    parsed <- tryCatch(parse(file = f), error = function(e) e)
-    if (inherits(parsed, "error")) fail(f, " does not parse: ", conditionMessage(parsed))
-  }
+# R files must parse. The Shiny app files are checked only while they are in the repository
+for (f in c("site/build_site.R", "tests/check_site.R", "ui.R", "server.R", "app.R")) {
+  if (!file.exists(f)) next
+  parsed <- tryCatch(parse(file = f), error = function(e) e)
+  if (inherits(parsed, "error")) fail(f, " does not parse: ", conditionMessage(parsed))
 }
 
 # Papers that are not coded yet
 if (!file.exists("db/uncoded_papers.csv")) {
-  warn("db/uncoded_papers.csv is missing. The New papers tab will be empty.")
+  warn("db/uncoded_papers.csv is missing. The New papers page will be empty.")
 } else {
   header <- trimws(sub("^﻿", "", readLines("db/uncoded_papers.csv", n = 1, warn = FALSE, encoding = "UTF-8")))
   if (!identical(header, "authors,year,title,doi")) warn("db/uncoded_papers.csv should start with the header authors,year,title,doi.")
@@ -109,7 +113,7 @@ groups <- tables$groups
 behaviors <- tables$behaviors
 sources <- tables$sources
 
-# Identifiers. They end up in links and in JavaScript, so they must be plain
+# Identifiers. They end up in file names, links, and JavaScript, so they must be plain
 for (t in names(required)) {
   id <- tables[[t]][[required[[t]][1]]]
   if (any(blank(id))) fail(t, ": ", plural(sum(blank(id)), "empty id"), ".")
@@ -127,7 +131,7 @@ if (length(orphans) > 0) fail("Groups point to species that do not exist: ", sho
 orphans <- unique(behaviors$group_id[!behaviors$group_id %in% groups$group_id])
 if (length(orphans) > 0) fail("Behaviors point to groups that do not exist: ", show(orphans), ".")
 
-# Sources. The behavior and species columns feed the species window and the cards
+# Sources. The behavior and species columns feed the species pages and the cards
 used_in <- list(
   behaviors = c("behavior_source", "vertical_source", "horizontal_source", "oblique_source", "domains_source", "anth_source"),
   species = "unit_source",
@@ -163,7 +167,7 @@ for (col in c("canonicalName", "common_name", "Genus", "Family", "Ordr", "Class"
 bad <- setdiff(unique(species$Class), known_classes)
 if (length(bad) > 0) warn("New class ", show(bad), ". It works, but the tree and the cards show it in a neutral color.")
 bad <- unique(species$IUCN[!is.na(species$IUCN) & !species$IUCN %in% known_iucn])
-if (length(bad) > 0) warn("Unknown IUCN codes: ", show(bad), ". The app shows them as not evaluated.")
+if (length(bad) > 0) warn("Unknown IUCN codes: ", show(bad), ". The website shows them as not evaluated.")
 bad <- unique(species$canonicalName[duplicated(species$canonicalName)])
 if (length(bad) > 0) warn("The same scientific name is used for more than one species: ", show(bad), ".")
 bad <- species$species_id[!species$species_id %in% groups$species_id]
@@ -201,7 +205,17 @@ if (length(unique(c(domains, known_domains))) > 10) warn("There are more than 10
 for (col in c("vertical", "horizontal", "oblique")) {
   x <- tolower(trimws(as.character(behaviors[[col]])))
   bad <- unique(x[!is.na(x) & x != "" & !x %in% known_transmission])
-  if (length(bad) > 0) warn(col, " has new answers: ", show(bad), ". The app shows them as unclear.")
+  if (length(bad) > 0) warn(col, " has new answers: ", show(bad), ". The website shows them as unclear.")
+}
+
+# Text that is not UTF-8. The website converts it from Latin-1, but it is better fixed in the database
+for (t in names(tables)) {
+  for (col in names(tables[[t]])) {
+    x <- tables[[t]][[col]]
+    if (!is.character(x)) next
+    bad <- which(!is.na(x) & !validUTF8(x))
+    if (length(bad) > 0) warn(t, ".", col, " has text that is not UTF-8 in ", plural(length(bad), "row"), ": ", show(tables[[t]][[1]][bad]), ".")
+  }
 }
 
 # The CSV tables in the release must match the database
