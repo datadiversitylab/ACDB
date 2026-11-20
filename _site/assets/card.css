@@ -1,0 +1,67 @@
+/* Species card. The same markup is shown in the app and printed to PDF (A4). */
+.acdb-pdf {
+  width: 190mm;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #24343A;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.45;
+}
+
+/* Top band, colored by taxonomic class */
+.pdf-band { display: flex; align-items: center; gap: 4mm; padding: 5mm 7mm; border-radius: 4mm; color: #ffffff; background: #3A86C8; }
+.pdf-band.mammals { background: #E76F51; }
+.pdf-band.other { background: #7B5EA7; }
+.pdf-logo { height: 13mm; }
+.pdf-band .t small { display: block; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.14em; opacity: 0.92; }
+.pdf-band .t b { font-size: 15pt; }
+.pdf-band .v { margin-left: auto; text-align: right; font-size: 8.5pt; line-height: 1.35; }
+.pdf-band .v b { display: block; font-size: 11pt; }
+
+/* Hero */
+.pdf-hero { display: grid; grid-template-columns: 68mm 1fr; gap: 7mm; padding: 6mm 0 2mm; }
+.pdf-hero .acdb-photo { height: 82mm; border-radius: 4mm; }
+.pdf-hero .acdb-credit a { color: #ffffff; text-decoration: none; }
+.pdf-id h1 { margin: 0 0 1.5mm; font-size: 25pt; font-weight: 800; line-height: 1.08; letter-spacing: -0.01em; color: #12343B; }
+.pdf-id .sci { margin-bottom: 3mm; font-size: 13pt; font-style: italic; color: #6B7A80; }
+.pdf-id .acdb-lineage { margin: 3mm 0; font-size: 8.5pt; }
+.pdf-id .acdb-facts { gap: 2.5mm; margin-top: 3mm; }
+.pdf-id .fact { padding: 2.5mm 3.5mm; border-radius: 3mm; }
+.pdf-id .fact b { font-size: 17pt; }
+.pdf-id .fact span { font-size: 7pt; }
+
+/* Sections */
+.pdf-h { margin: 6mm 0 3mm; padding-bottom: 1.5mm; border-bottom: 0.6mm solid #F2A93B; font-size: 10.5pt; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #E76F51; }
+.pdf-group { margin-bottom: 4mm; }
+.pdf-group h3, .pdf-group .loc, .pdf-h { break-after: avoid; }
+.pdf-group h3 { margin: 0; font-size: 12pt; font-weight: 700; color: #0F5F5A; }
+.pdf-group .loc { margin-bottom: 1.5mm; font-size: 8.5pt; color: #6B7A80; }
+.pdf-beh { margin: 1.5mm 0; padding: 2.5mm 3.5mm; border-left: 1.2mm solid #1B7F79; border-radius: 2mm; background: #F6F9F9; break-inside: avoid; }
+.pdf-beh h4 { display: inline; margin: 0 2mm 0 0; font-size: 10pt; font-weight: 700; color: #12343B; }
+.pdf-beh p { margin: 1mm 0; font-size: 9pt; line-height: 1.4; }
+.pdf-beh .trans { margin-top: 1mm; }
+.pdf-beh .tpill { margin-bottom: 0; font-size: 7.5pt; }
+.pdf-beh sup { font-size: 7pt; font-weight: 700; color: #1B7F79; }
+.pdf-beh .chip { margin-bottom: 0; font-size: 7.5pt; }
+.pdf-tree p { margin: 1mm 0; font-size: 9pt; }
+.pdf-tree .acdb-bar { grid-template-columns: 38mm 1fr 8mm; margin: 1.5mm 0; font-size: 8.5pt; }
+.pdf-refs { margin: 0; padding-left: 5mm; font-size: 8pt; line-height: 1.4; }
+.pdf-refs li { margin-bottom: 1.2mm; break-inside: avoid; }
+.pdf-refs a { color: #1B7F79; }
+
+/* Footer */
+.pdf-foot { display: flex; align-items: center; gap: 4mm; margin-top: 7mm; padding: 3.5mm 6mm; border-radius: 3mm; background: #12343B; color: rgba(255, 255, 255, 0.85); font-size: 7pt; line-height: 1.4; }
+.pdf-foot img { height: 8mm; }
+.pdf-foot a { color: #F2A93B; }
+
+@media print {
+  .acdb-pdf { padding-bottom: 20mm; }
+  .pdf-foot { position: fixed; left: 0; right: 0; bottom: 0; margin: 0; }
+}
+
+/* Description from Wikipedia */
+.pdf-about.acdb-about.done { margin: 4mm 0 0; padding: 3mm 4mm; border-left: 1.2mm solid #F2A93B; border-radius: 2mm; background: #FFF9EC; }
+.pdf-about .txt { margin: 0 0 1.5mm; font-size: 9pt; line-height: 1.45; }
+.pdf-about .credit { font-size: 7pt; line-height: 1.35; color: #6B7A80; }
+.pdf-about .credit a { color: #1B7F79; }

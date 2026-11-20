@@ -1,0 +1,86 @@
+/* What Shiny and bslib added to the app, for the website. The look itself is in www/acdb.css and www/card.css */
+
+/* Theme of the app: bs_theme(bootswatch = "cosmo", primary = "#1B7F79", secondary = "#555555", base_font = "Roboto") */
+:root, [data-bs-theme=light] {
+  --bs-primary: #1B7F79;
+  --bs-primary-rgb: 27, 127, 121;
+  --bs-secondary: #555555;
+  --bs-secondary-rgb: 85, 85, 85;
+  --bs-link-color: #1B7F79;
+  --bs-link-color-rgb: 27, 127, 121;
+  --bs-link-hover-color: #166661;
+  --bs-link-hover-color-rgb: 22, 102, 97;
+  --bs-body-font-family: Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+.btn-primary {
+  --bs-btn-bg: #1B7F79; --bs-btn-border-color: #1B7F79;
+  --bs-btn-hover-bg: #176C67; --bs-btn-hover-border-color: #166661;
+  --bs-btn-active-bg: #166661; --bs-btn-active-border-color: #145F5B;
+  --bs-btn-disabled-bg: #1B7F79; --bs-btn-disabled-border-color: #1B7F79;
+  --bs-btn-focus-shadow-rgb: 61, 146, 141;
+}
+/* bslib draws Shiny's default button as an outline in the secondary color */
+.btn-default {
+  --bs-btn-color: #555555; --bs-btn-border-color: #555555; --bs-btn-bg: transparent;
+  --bs-btn-hover-color: #ffffff; --bs-btn-hover-bg: #555555; --bs-btn-hover-border-color: #555555;
+  --bs-btn-active-color: #ffffff; --bs-btn-active-bg: #555555; --bs-btn-active-border-color: #555555;
+  --bs-btn-focus-shadow-rgb: 85, 85, 85;
+}
+.nav-pills { --bs-nav-pills-link-active-bg: #1B7F79; }
+.form-select:focus, .form-control:focus { border-color: #8dbfbc; box-shadow: 0 0 0 0.25rem rgba(27, 127, 121, 0.25); }
+.navbar-brand { text-decoration: none; }
+.navbar-nav .nav-link > div { display: inline; }
+.navbar-nav .nav-link i { margin-right: 4px; }
+
+/* Phones and small tablets, from ui.R: no hamburger, the tabs stay in one row and swipe sideways */
+@media (max-width: 991.98px) {
+  .navbar { padding: 2px 6px 0; }
+  .navbar > .container-fluid { padding-left: 4px; padding-right: 4px; }
+  .navbar-brand { margin: 0; padding: 0; }
+  .navbar-brand div { font-size: 15px !important; padding: 0 !important; display: flex; align-items: center; }
+  .navbar-brand img { height: 26px !important; margin-right: 8px !important; }
+  .navbar-brand .acdb-ver { display: none; }
+  .navbar-toggler { display: none !important; }
+  .navbar-collapse { display: block !important; flex-basis: 100%; width: 100%; padding: 0; margin: 0; }
+  .navbar-nav { flex-direction: row !important; flex-wrap: nowrap; justify-content: flex-start !important; margin: 0 !important; padding-right: 24px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+  .navbar-nav::-webkit-scrollbar { display: none; }
+  .navbar-nav > li { flex: none; }
+  .navbar-nav > li > a { padding: 12px 12px !important; white-space: nowrap; }
+  .navbar-nav li.dropdown { display: contents; }
+  .navbar-nav li.dropdown > .nav-link { display: none; }
+  .navbar-nav .dropdown-menu { display: contents !important; }
+  .navbar-nav .dropdown-menu > li { flex: none; }
+  .navbar-nav .dropdown-item { padding: 12px 12px; font-size: 15px; font-weight: 500; white-space: nowrap; color: rgba(255, 255, 255, 0.78); background: transparent; }
+  .navbar-nav .dropdown-item:hover, .navbar-nav .dropdown-item.active { color: #ffffff; background: transparent; box-shadow: inset 0 -3px 0 #F2A93B; }
+}
+
+/* Cards and rows that open a species page */
+[data-href] { cursor: pointer; }
+.acdb-card h5 a, .acdb-rel .nm a, .acdb-sp b { color: inherit; text-decoration: none; }
+.acdb-card, .acdb-sp { color: inherit; }
+#groups_table td:nth-child(2) a { color: inherit; text-decoration: none; font-weight: 500; }
+.acdb-btn-more { margin-top: 26px; }
+/* acdb.css paints every button of the example teal, so the second one needs white text to be readable */
+.acdb-ex-text .btn-default { color: #ffffff; }
+
+/* The species window of the app, as a page */
+.acdb-mpage { padding: 28px 12px 48px; }
+.acdb-mpage .modal-dialog { max-width: 1140px; margin: 0 auto; pointer-events: auto; }
+.acdb-mpage .modal-content { border: none; border-radius: 20px; overflow: hidden; background: var(--sand); box-shadow: 0 10px 40px rgba(18, 52, 59, 0.18); }
+.acdb-mpage .modal-body { padding: 0; }
+.acdb-mpage .modal-footer { border-top: 1px solid #eadfcf; background: #ffffff; }
+.acdb-mid h1.acdb-mtitle { margin: 6px 0 2px; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+.acdb-bgroup { scroll-margin-top: 80px; }
+.acdb-mpage .leaflet-container { border-radius: 10px; }
+@media (max-width: 768px) { .acdb-mid h1.acdb-mtitle { font-size: 26px; } }
+
+/* Every species as a plain list under the tree */
+.acdb-alllist { margin-top: 18px; }
+.acdb-alllist ul { columns: 3 220px; padding-left: 18px; font-size: 14px; }
+.acdb-alllist li { break-inside: avoid; }
+
+/* Card preview: the date is filled in when the card is shown */
+.acdb-paper:empty, #card_preview:empty { min-height: 200px; }
+
+/* Tables: room for the photo column */
+#groups_table td:first-child { width: 68px; }
