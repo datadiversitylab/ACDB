@@ -1,0 +1,35 @@
+name: check-db
+
+# Checks that the database and the app files meet what the app expects.
+# It runs on pull requests and pushes that touch the data or the app, from the
+# Actions tab, and before every release. Errors fail the run. Warnings only show up.
+# The same check runs locally with: Rscript tests/check_db.R
+on:
+  pull_request:
+    paths: ["db/**", "ui.R", "server.R", "app.R", "www/**", "VERSION", "tests/**", ".github/workflows/check-db.yml"]
+  push:
+    paths: ["db/**", "ui.R", "server.R", "app.R", "www/**", "VERSION", "tests/**", ".github/workflows/check-db.yml"]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.4"
+          use-public-rspm: true
+
+      - name: Install RSQLite
+        run: Rscript -e 'install.packages("RSQLite")'
+
+      - name: Check the database
+        run: Rscript tests/check_db.R
