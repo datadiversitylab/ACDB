@@ -60,3 +60,9 @@ We welcome contributions from researchers to expand and update the database. We 
 
 This project is licensed under the [MIT License](LICENSE).
 
+## Local render
+
+Please use the following code from the terminal
+```
+python3 -m http.server 8000 --directory _site
+```
