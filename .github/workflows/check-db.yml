@@ -1,14 +1,15 @@
 name: check-db
 
-# Checks that the database and the app files meet what the app expects.
-# It runs on pull requests and pushes that touch the data or the app, from the
-# Actions tab, and before every release. Errors fail the run. Warnings only show up.
+# Checks that the database and the website files meet what the website expects.
+# It runs on pull requests and pushes that touch the data or the website, from the
+# Actions tab, and before every release and every website build. Errors fail the run.
+# Warnings only show up.
 # The same check runs locally with: Rscript tests/check_db.R
 on:
   pull_request:
-    paths: ["db/**", "ui.R", "server.R", "app.R", "www/**", "VERSION", "tests/**", ".github/workflows/check-db.yml"]
+    paths: ["db/**", "site/**", "www/**", "ui.R", "server.R", "app.R", "VERSION", "tests/**", ".github/workflows/check-db.yml"]
   push:
-    paths: ["db/**", "ui.R", "server.R", "app.R", "www/**", "VERSION", "tests/**", ".github/workflows/check-db.yml"]
+    paths: ["db/**", "site/**", "www/**", "ui.R", "server.R", "app.R", "VERSION", "tests/**", ".github/workflows/check-db.yml"]
   workflow_dispatch:
   workflow_call:
 

@@ -1,12 +1,15 @@
 name: site
 
-# Builds the static pages from the database and publishes them to GitHub Pages.
-# It runs when the data, the site files, or the version change, and from the Actions tab.
-# The same build runs locally with: Rscript site/build_site.R
+# Builds the website from the database, checks it, and publishes it to GitHub Pages.
+# Pull requests build and check the site without publishing it. Pushes to main publish it.
+# The release workflow starts it after each release, so the site shows the new version.
+# The same steps run locally with: Rscript site/build_site.R, then Rscript tests/check_site.R
 on:
   push:
     branches: [main]
-    paths: ["db/**", "site/**", "www/**", "VERSION", ".github/workflows/site.yml"]
+    paths: ["db/**", "site/**", "www/**", "tests/**", "VERSION", ".github/workflows/site.yml", ".github/workflows/check-db.yml"]
+  pull_request:
+    paths: ["db/**", "site/**", "www/**", "tests/**", "VERSION", ".github/workflows/site.yml", ".github/workflows/check-db.yml"]
   workflow_dispatch:
 
 permissions:
@@ -15,10 +18,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  # Nothing is built unless the database passes the checks
   check:
     uses: ./.github/workflows/check-db.yml
 
@@ -38,15 +42,20 @@ jobs:
       - name: Install RSQLite
         run: Rscript -e 'install.packages("RSQLite")'
 
-      - name: Build the pages
+      - name: Build the website
         run: Rscript site/build_site.R
 
+      - name: Check the website
+        run: Rscript tests/check_site.R
+
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: _site
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
