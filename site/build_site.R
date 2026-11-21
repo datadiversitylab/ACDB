@@ -13,6 +13,8 @@ out <- "_site"
 site_url <- "https://datadiversitylab.github.io/ACDB/"
 paper_url <- "https://doi.org/10.1038/s41597-025-05315-y"
 repo_url <- "https://github.com/datadiversitylab/ACDB"
+# Google Search Console
+google_verification <- "LG_KnLguQHN2dFnje86YgIzOrPVdEH_jmdRIfJLIXrw"
 acdb_version <- trimws(readLines("VERSION", warn = FALSE)[1])
 
 # Data -------------------------------------------------------------------------
@@ -395,6 +397,7 @@ page <- function(file, title, description, active, body, json_ld = NULL) {
   head <- tagList(
     tags$meta(charset = "utf-8"),
     tags$meta(name = "viewport", content = "width=device-width, initial-scale=1"),
+    if (file == "index.html") tags$meta(name = "google-site-verification", content = google_verification),
     HTML("<title>", esc(title), "</title>"),
     tags$meta(name = "description", content = description),
     tags$link(rel = "canonical", href = canonical),
@@ -407,6 +410,9 @@ page <- function(file, title, description, active, body, json_ld = NULL) {
     tags$link(rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300..900;1,300..900&display=swap"),
     lapply(vendor_css, function(f) tags$link(rel = "stylesheet", href = paste0(root, "assets/", f))),
     if (!is.null(json_ld)) HTML("<script type=\"application/ld+json\">", json_ld, "</script>"),
+    tags$script(defer = NA, src = "https://umami.datadiversitylab.synology.me/script.js",
+                `data-website-id` = "543cffef-a100-47af-9dd9-2cf39517077b",
+                `data-domains` = "datadiversitylab.github.io", `data-tag` = "acdb-site"),
     tags$script(defer = NA, src = "https://umami.datadiversitylab.synology.me/script.js",
                 `data-website-id` = "d6d0486a-5f2c-4ddc-bab6-93e1d25801f6",
                 `data-domains` = "datadiversitylab.github.io")
