@@ -408,8 +408,8 @@ page <- function(file, title, description, active, body, json_ld = NULL) {
     lapply(vendor_css, function(f) tags$link(rel = "stylesheet", href = paste0(root, "assets/", f))),
     if (!is.null(json_ld)) HTML("<script type=\"application/ld+json\">", json_ld, "</script>"),
     tags$script(defer = NA, src = "https://umami.datadiversitylab.synology.me/script.js",
-                `data-website-id` = "543cffef-a100-47af-9dd9-2cf39517077b",
-                `data-domains` = "datadiversitylab.github.io", `data-tag` = "acdb-site")
+                `data-website-id` = "d6d0486a-5f2c-4ddc-bab6-93e1d25801f6",
+                `data-domains` = "datadiversitylab.github.io")
   )
   html <- paste0(
     "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n", render(head), "\n</head>\n",
